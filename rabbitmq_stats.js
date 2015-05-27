@@ -70,13 +70,14 @@ RabbitMQStats.prototype.sendQueues = function(callback) {
         messages_unacknowledged: item.messages_unacknowledged
       };
 
-      if (item.backing_queue_status) {
-        newItem.avg_egress_rate = item.backing_queue_status.avg_egress_rate;
-        newItem.avg_ingress_rate = item.backing_queue_status.payload.avg_ingress_rate;
+      var bqs = item.backing_queue_status;
+      if (bqs) {
+        newItem.avg_egress_rate = bqs.avg_egress_rate;
+        newItem.avg_ingress_rate = bqs.avg_ingress_rate;
       }
 
-      if (item.memory_stats) {
-        var ms = item.memory_stats;
+      var ms = item.memory_stats;
+      if (ms) {
         newItem.ack_rate = ms.ack_details.rate;
         newItem.deliver_rate = ms.deliver_details.rate;
         newItem.deliver_get_rate = ms.deliver_get_details.rate;
