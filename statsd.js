@@ -12,7 +12,14 @@ StatsD.prototype.send = function(key, value, type, callback) {
   var data = [key, ':', value, '|', type].join('');
   var buffer = new Buffer(data);
 
-  this._socket.send(buffer, 0, buffer.length, this._port, this._host, callback);
+  this._socket.send(buffer, 0, buffer.length, this._port, this._host, function(err, bytes) {
+    var loglevel = err ? 'error' : 'log';
+    console[loglevel](['Sending data to ', this._host, ':', this._port, ' - ', data].join(''));
+
+    if (callback) {
+      callback(err, bytes);
+    }
+  });
 };
 
 StatsD.prototype.close = function() {
