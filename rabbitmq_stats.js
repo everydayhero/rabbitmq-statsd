@@ -13,7 +13,7 @@ function RabbitMQStats(options) {
     port: options.statsd_port
   });
   this._interval = options.interval || 10;
-  this._prefix = options.prefix || require('os').hostname();
+  this._prefix = options.prefix;
 }
 
 RabbitMQStats.prototype.send = function(data, prefix) {
@@ -24,7 +24,7 @@ RabbitMQStats.prototype.send = function(data, prefix) {
   } else if (typeof(data) === 'object') {
     Object.keys(data).forEach(function(key) {
       var value = data[key];
-      var prefixedKey = compact(prefix, key).join('.');
+      var prefixedKey = prefix ? [prefix, key].join('.') : key;
 
       if (Array.isArray(value) || typeof(value) === 'object') {
         this.send(value, prefixedKey);
@@ -86,11 +86,11 @@ RabbitMQStats.prototype.sendQueues = function(callback) {
 
       var temp = {};
       temp[item.name] = newItem;
-      return newItem;
+      return temp;
     });
 
     console.log('Sending rabbitmq queues data');
-    this.send(payload);
+    this.send(payload, this._prefix);
     callback(null, payload);
   }.bind(this));
 };
@@ -124,11 +124,6 @@ RabbitMQStats.prototype.watch = function(callback) {
     }.bind(this), this._interval * 1000);
   }.bind(this));
 };
-
-function compact() {
-  var array = [].slice.call(arguments);
-  return array.filter(function(i) { return !!i });
-}
 
 module.exports = RabbitMQStats;
 
