@@ -9,7 +9,8 @@ function StatsD(options) {
 }
 
 StatsD.prototype.send = function(key, value, type, callback) {
-  var data = [key, ':', value, '|', type].join('');
+  var normalizedKey = key.toString().replace(/\W+/, '.');
+  var data = [normalizedKey, ':', value, '|', type].join('');
   var buffer = new Buffer(data);
 
   this._socket.send(buffer, 0, buffer.length, this._port, this._host, function(err, bytes) {
