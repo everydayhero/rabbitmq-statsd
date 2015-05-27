@@ -1,0 +1,8 @@
+{
+  "name": "rabbitmq-statsd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/rabbitmq-statsd",
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,310 @@
+[
+  {
+    "memory": 22296,
+    "message_stats": {
+      "ack": 8462,
+      "ack_details": {
+        "rate": 0.0
+      },
+      "deliver": 16652,
+      "deliver_details": {
+        "rate": 0.0
+      },
+      "deliver_get": 16652,
+      "deliver_get_details": {
+        "rate": 0.0
+      },
+      "publish": 16647,
+      "publish_details": {
+        "rate": 0.0
+      },
+      "redeliver": 5,
+      "redeliver_details": {
+        "rate": 0.0
+      }
+    },
+    "messages": 0,
+    "messages_details": {
+      "rate": 0.0
+    },
+    "messages_ready": 0,
+    "messages_ready_details": {
+      "rate": 0.0
+    },
+    "messages_unacknowledged": 0,
+    "messages_unacknowledged_details": {
+      "rate": 0.0
+    },
+    "idle_since": "2015-05-26 0:08:49",
+    "consumer_utilisation": "",
+    "policy": "",
+    "exclusive_consumer_tag": "",
+    "consumers": 6,
+    "down_slave_nodes": "",
+    "backing_queue_status": {
+      "q1": 0,
+      "q2": 0,
+      "delta": [
+        "delta",
+        "undefined",
+        0,
+        "undefined"
+      ],
+      "q3": 0,
+      "q4": 0,
+      "len": 0,
+      "target_ram_count": "infinity",
+      "next_seq_id": 16647,
+      "avg_ingress_rate": 0.31112749925060335,
+      "avg_egress_rate": 0.31112749925060335,
+      "avg_ack_ingress_rate": 0.31112749925060335,
+      "avg_ack_egress_rate": 0.31112749925060335
+    },
+    "state": "running",
+    "messages_ram": 0,
+    "messages_ready_ram": 0,
+    "messages_unacknowledged_ram": 0,
+    "messages_persistent": 0,
+    "message_bytes": 0,
+    "message_bytes_ready": 0,
+    "message_bytes_unacknowledged": 0,
+    "message_bytes_ram": 0,
+    "message_bytes_persistent": 0,
+    "name": "heroix.au",
+    "vhost": "/",
+    "durable": true,
+    "auto_delete": false,
+    "arguments": {},
+    "node": "rabbit@ip-10-21-68-213"
+  },
+  {
+    "memory": 22080,
+    "message_stats": {
+      "ack": 8166,
+      "ack_details": {
+        "rate": 0.0
+      },
+      "deliver": 16653,
+      "deliver_details": {
+        "rate": 0.0
+      },
+      "deliver_get": 16653,
+      "deliver_get_details": {
+        "rate": 0.0
+      },
+      "publish": 16647,
+      "publish_details": {
+        "rate": 0.0
+      },
+      "redeliver": 6,
+      "redeliver_details": {
+        "rate": 0.0
+      }
+    },
+    "messages": 0,
+    "messages_details": {
+      "rate": 0.0
+    },
+    "messages_ready": 0,
+    "messages_ready_details": {
+      "rate": 0.0
+    },
+    "messages_unacknowledged": 0,
+    "messages_unacknowledged_details": {
+      "rate": 0.0
+    },
+    "idle_since": "2015-05-26 0:08:49",
+    "consumer_utilisation": "",
+    "policy": "",
+    "exclusive_consumer_tag": "",
+    "consumers": 3,
+    "down_slave_nodes": "",
+    "backing_queue_status": {
+      "q1": 0,
+      "q2": 0,
+      "delta": [
+        "delta",
+        "undefined",
+        0,
+        "undefined"
+      ],
+      "q3": 0,
+      "q4": 0,
+      "len": 0,
+      "target_ram_count": "infinity",
+      "next_seq_id": 16647,
+      "avg_ingress_rate": 0.33332344336505576,
+      "avg_egress_rate": 0.33332344336505576,
+      "avg_ack_ingress_rate": 0.33332344336505576,
+      "avg_ack_egress_rate": 0.33332344336505576
+    },
+    "state": "running",
+    "messages_ram": 0,
+    "messages_ready_ram": 0,
+    "messages_unacknowledged_ram": 0,
+    "messages_persistent": 0,
+    "message_bytes": 0,
+    "message_bytes_ready": 0,
+    "message_bytes_unacknowledged": 0,
+    "message_bytes_ram": 0,
+    "message_bytes_persistent": 0,
+    "name": "heroix.gb",
+    "vhost": "/",
+    "durable": true,
+    "auto_delete": false,
+    "arguments": {},
+    "node": "rabbit@ip-10-21-68-213"
+  },
+  {
+    "memory": 22080,
+    "message_stats": {
+      "ack": 8142,
+      "ack_details": {
+        "rate": 0.0
+      },
+      "deliver": 16652,
+      "deliver_details": {
+        "rate": 0.0
+      },
+      "deliver_get": 16652,
+      "deliver_get_details": {
+        "rate": 0.0
+      },
+      "publish": 16647,
+      "publish_details": {
+        "rate": 0.0
+      },
+      "redeliver": 5,
+      "redeliver_details": {
+        "rate": 0.0
+      }
+    },
+    "messages": 0,
+    "messages_details": {
+      "rate": 0.0
+    },
+    "messages_ready": 0,
+    "messages_ready_details": {
+      "rate": 0.0
+    },
+    "messages_unacknowledged": 0,
+    "messages_unacknowledged_details": {
+      "rate": 0.0
+    },
+    "idle_since": "2015-05-26 0:08:48",
+    "consumer_utilisation": "",
+    "policy": "",
+    "exclusive_consumer_tag": "",
+    "consumers": 3,
+    "down_slave_nodes": "",
+    "backing_queue_status": {
+      "q1": 0,
+      "q2": 0,
+      "delta": [
+        "delta",
+        "undefined",
+        0,
+        "undefined"
+      ],
+      "q3": 0,
+      "q4": 0,
+      "len": 0,
+      "target_ram_count": "infinity",
+      "next_seq_id": 16647,
+      "avg_ingress_rate": 0.17391152945666347,
+      "avg_egress_rate": 0.17391152945666347,
+      "avg_ack_ingress_rate": 0.17391152945666347,
+      "avg_ack_egress_rate": 0.17391152945666347
+    },
+    "state": "running",
+    "messages_ram": 0,
+    "messages_ready_ram": 0,
+    "messages_unacknowledged_ram": 0,
+    "messages_persistent": 0,
+    "message_bytes": 0,
+    "message_bytes_ready": 0,
+    "message_bytes_unacknowledged": 0,
+    "message_bytes_ram": 0,
+    "message_bytes_persistent": 0,
+    "name": "heroix.nz",
+    "vhost": "/",
+    "durable": true,
+    "auto_delete": false,
+    "arguments": {},
+    "node": "rabbit@ip-10-21-68-213"
+  },
+  {
+    "memory": 22456,
+    "message_stats": {
+      "ack": 19937,
+      "ack_details": {
+        "rate": 0.0
+      },
+      "deliver": 19968,
+      "deliver_details": {
+        "rate": 0.0
+      },
+      "deliver_get": 19968,
+      "deliver_get_details": {
+        "rate": 0.0
+      },
+      "publish": 19968,
+      "publish_details": {
+        "rate": 0.0
+      }
+    },
+    "messages": 0,
+    "messages_details": {
+      "rate": 0.0
+    },
+    "messages_ready": 0,
+    "messages_ready_details": {
+      "rate": 0.0
+    },
+    "messages_unacknowledged": 0,
+    "messages_unacknowledged_details": {
+      "rate": 0.0
+    },
+    "idle_since": "2015-05-26 0:16:16",
+    "consumer_utilisation": "",
+    "policy": "",
+    "exclusive_consumer_tag": "",
+    "consumers": 16,
+    "down_slave_nodes": "",
+    "backing_queue_status": {
+      "q1": 0,
+      "q2": 0,
+      "delta": [
+        "delta",
+        "undefined",
+        0,
+        "undefined"
+      ],
+      "q3": 0,
+      "q4": 0,
+      "len": 0,
+      "target_ram_count": "infinity",
+      "next_seq_id": 19968,
+      "avg_ingress_rate": 0.01377087266544017,
+      "avg_egress_rate": 0.01377087266544017,
+      "avg_ack_ingress_rate": 0.01377087266544017,
+      "avg_ack_egress_rate": 0.01377087266544017
+    },
+    "state": "running",
+    "messages_ram": 0,
+    "messages_ready_ram": 0,
+    "messages_unacknowledged_ram": 0,
+    "messages_persistent": 0,
+    "message_bytes": 0,
+    "message_bytes_ready": 0,
+    "message_bytes_unacknowledged": 0,
+    "message_bytes_ram": 0,
+    "message_bytes_persistent": 0,
+    "name": "supporter",
+    "vhost": "/",
+    "durable": true,
+    "auto_delete": false,
+    "arguments": {},
+    "node": "rabbit@ip-10-21-68-213"
+  }
+]
