@@ -9,7 +9,7 @@ function StatsD(options) {
 }
 
 StatsD.prototype.send = function(key, value, type, callback) {
-  var normalizedKey = key.toString().replace(/\W+/, '.');
+  var normalizedKey = key.toString().replace(/\W+/g, '.');
   var data = [normalizedKey, ':', value, '|', type].join('');
   var buffer = new Buffer(data);
 
