@@ -5,6 +5,7 @@ proc:
   environment:
     RABBITMQ_HOST: rabbitmq
     RABBITMQ_PORT: 15672
+    DEBUG: true
   links:
     - rabbitmq
 rabbitmq:

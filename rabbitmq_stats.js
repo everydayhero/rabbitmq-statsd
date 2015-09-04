@@ -10,13 +10,16 @@ function RabbitMQStats(options) {
   });
   this._statsd = new StatsD({
     host: options.statsd_host,
-    port: options.statsd_port
+    port: options.statsd_port,
+    debug: options.debug
   });
   this._interval = options.interval || 10;
   this._prefix = options.prefix;
 }
 
 RabbitMQStats.prototype.send = function(data, prefix) {
+  this._statsd.begin();
+
   if (Array.isArray(data)) {
     data.forEach(function(item) {
       this.send(item, prefix);
@@ -35,6 +38,8 @@ RabbitMQStats.prototype.send = function(data, prefix) {
   } else {
     console.warn('Cannot send data: ' + String(data));
   }
+
+  this._statsd.end();
 };
 
 RabbitMQStats.prototype.sendOverview = function(callback) {

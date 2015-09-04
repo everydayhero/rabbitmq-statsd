@@ -8,7 +8,8 @@ var rabbitmqStats = new RabbitMQStats({
   statsd_host: process.env.STATSD_HOST,
   statsd_port: process.env.STATSD_PORT,
   prefix: process.env.PREFIX,
-  interval: process.env.INTERVAL
+  interval: process.env.INTERVAL,
+  debug: process.env.DEBUG
 });
 
 rabbitmqStats.watch(function(err) {
