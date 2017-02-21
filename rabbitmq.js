@@ -5,6 +5,7 @@ function RabbitMQ(options) {
   this._port = parseInt(options.port) || 15672;
   this._user = options.user || 'guest';
   this._password = options.password || 'guest';
+  this._debug = options.debug || false;
 }
 
 RabbitMQ.prototype.overview = function(callback) {
@@ -35,7 +36,10 @@ RabbitMQ.prototype.request = function(options, callback) {
     });
     res.on('end', function() {
       log.push('received ', body.length, ' bytes');
-      console.log(log.join(''));
+
+      if (this._debug) {
+        console.log(log.join(''));
+      }
 
       try {
         callback(null, JSON.parse(body));
@@ -54,4 +58,3 @@ RabbitMQ.prototype.request = function(options, callback) {
 };
 
 module.exports = RabbitMQ;
-

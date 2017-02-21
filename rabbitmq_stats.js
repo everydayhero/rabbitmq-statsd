@@ -6,7 +6,8 @@ function RabbitMQStats(options) {
     host: options.rabbitmq_host,
     port: options.rabbitmq_port,
     user: options.rabbitmq_user,
-    password: options.rabbitmq_password
+    password: options.rabbitmq_password,
+    debug: options.debug
   });
   this._statsd = new StatsD({
     host: options.statsd_host,
@@ -15,6 +16,8 @@ function RabbitMQStats(options) {
   });
   this._interval = options.interval || 10;
   this._prefix = options.prefix;
+  this._debug = options.debug || false;
+
 }
 
 RabbitMQStats.prototype.send = function(data, prefix) {
@@ -49,7 +52,11 @@ RabbitMQStats.prototype.sendOverview = function(callback) {
     }
 
     var payload = data.object_totals;
-    console.log('Sending rabbitmq overview data');
+
+    if (this._debug) {
+      console.log('Sending rabbitmq overview data');
+    }
+
     this.send(payload, this._prefix);
     callback(null, payload);
   }.bind(this));
@@ -94,7 +101,10 @@ RabbitMQStats.prototype.sendQueues = function(callback) {
       return temp;
     });
 
-    console.log('Sending rabbitmq queues data');
+    if (this._debug) {
+      console.log('Sending rabbitmq queues data');
+    }
+
     this.send(payload, this._prefix);
     callback(null, payload);
   }.bind(this));
@@ -131,4 +141,3 @@ RabbitMQStats.prototype.watch = function(callback) {
 };
 
 module.exports = RabbitMQStats;
-
